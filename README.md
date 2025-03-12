@@ -1,6 +1,6 @@
 # sigma-rules
 
-## 🛡️ Supports
+## ⚡ Supports
 * Prefetch (LOLBAS)
 
 ## 🛡️ Purpose
