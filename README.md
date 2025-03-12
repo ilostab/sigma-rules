@@ -27,13 +27,12 @@ service: prefetch
 
 ## Resources
 
-- [SigmaHQ]([url](https://github.com/SigmaHQ/sigma))
+- [SigmaHQ](https://github.com/SigmaHQ/sigma)
+- [Sigma rule spec](https://github.com/SigmaHQ/sigma-specification/blob/main/specification/sigma-rules-specification.md#logsource)
+- [Velociraptor - Developing Sigma rules in Velociraptor](https://docs.velociraptor.app/blog/2025/2025-02-02-sigma/)
+- [Velociraptor - Sigma in Velociraptor](https://sigma.velocidex.com/docs/sigma_in_velociraptor/)
 
-- [Sigma rule spec]([url](https://github.com/SigmaHQ/sigma-specification/blob/main/specification/sigma-rules-specification.md#logsource))
 
-- [Velociraptor - Developing Sigma rules in Velociraptor]([url](https://docs.velociraptor.app/blog/2025/2025-02-02-sigma/))
-
-- [Velociraptor - Sigma in Velociraptor]([url](https://sigma.velocidex.com/docs/sigma_in_velociraptor/))
 
 # 🚀 Getting Started
 
