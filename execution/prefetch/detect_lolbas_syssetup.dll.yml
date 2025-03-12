@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Syssetup.dll Execution
+description: Detects suspicious execution of Syssetup.dll based on prefetch data.
+  Windows NT System Setup.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: SYSSETUP.DLL
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218.011
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

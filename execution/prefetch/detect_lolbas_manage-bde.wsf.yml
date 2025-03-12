@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Manage-bde.wsf Execution
+description: Detects suspicious execution of Manage-bde.wsf based on prefetch data.
+  Script for managing BitLocker.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: MANAGE-BDE.WSF
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1216
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

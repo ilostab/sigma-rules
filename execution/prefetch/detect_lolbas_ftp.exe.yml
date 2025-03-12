@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Ftp.exe Execution
+description: Detects suspicious execution of Ftp.exe based on prefetch data. A binary
+  designed for connecting to FTP servers.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: FTP.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1202
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

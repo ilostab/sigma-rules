@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Msdeploy.exe Execution
+description: Detects suspicious execution of Msdeploy.exe based on prefetch data.
+  Microsoft tool used to deploy Web Applications..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: MSDEPLOY.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

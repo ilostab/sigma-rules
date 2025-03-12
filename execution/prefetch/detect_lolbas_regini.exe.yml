@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Regini.exe Execution
+description: Detects suspicious execution of Regini.exe based on prefetch data. Used
+  to manipulate the registry.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: REGINI.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1564.004
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

@@ -1,0 +1,21 @@
+title: Prefetch - Suspicious Update.exe Execution
+description: Detects suspicious execution of Update.exe based on prefetch data. Binary
+  to update the existing installed Nuget/squirrel package. Part of Microsoft Teams
+  installation..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: UPDATE.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

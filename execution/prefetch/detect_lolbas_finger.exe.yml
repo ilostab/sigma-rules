@@ -1,0 +1,21 @@
+title: Prefetch - Suspicious Finger.exe Execution
+description: Detects suspicious execution of Finger.exe based on prefetch data. Displays
+  information about a user or users on a specified remote computer that is running
+  the Finger service or daemon.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: FINGER.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1105
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

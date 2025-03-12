@@ -1,0 +1,23 @@
+title: Prefetch - Suspicious ConfigSecurityPolicy.exe Execution
+description: Detects suspicious execution of ConfigSecurityPolicy.exe based on prefetch
+  data. Binary part of Windows Defender. Used to manage settings in Windows Defender.
+  You can configure different pilot collections for each of the co-management workloads.
+  Being able to use different pilot collections allows you to take a more granular
+  approach when shifting workloads..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: CONFIGSECURITYPOLICY.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1567
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

@@ -1,0 +1,21 @@
+title: Prefetch - Suspicious Installutil.exe Execution
+description: Detects suspicious execution of Installutil.exe based on prefetch data.
+  The Installer tool is a command-line utility that allows you to install and uninstall
+  server resources by executing the installer components in specified assemblies.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: INSTALLUTIL.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218.004
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

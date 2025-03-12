@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Odbcconf.exe Execution
+description: Detects suspicious execution of Odbcconf.exe based on prefetch data.
+  Used in Windows for managing ODBC connections.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: ODBCCONF.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218.008
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

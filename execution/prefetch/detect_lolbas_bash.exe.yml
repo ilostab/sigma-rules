@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Bash.exe Execution
+description: Detects suspicious execution of Bash.exe based on prefetch data. File
+  used by Windows subsystem for Linux.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: BASH.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1202
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

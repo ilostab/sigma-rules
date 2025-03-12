@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Microsoft.NodejsTools.PressAnyKey.exe Execution
+description: Detects suspicious execution of Microsoft.NodejsTools.PressAnyKey.exe
+  based on prefetch data. Part of the NodeJS Visual Studio tools..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: MICROSOFT.NODEJSTOOLS.PRESSANYKEY.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1127
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

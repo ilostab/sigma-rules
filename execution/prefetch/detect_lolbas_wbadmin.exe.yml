@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious wbadmin.exe Execution
+description: Detects suspicious execution of wbadmin.exe based on prefetch data. Windows
+  Backup Administration utility.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: WBADMIN.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1003.003
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

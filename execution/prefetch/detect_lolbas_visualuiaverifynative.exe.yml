@@ -1,0 +1,21 @@
+title: Prefetch - Suspicious VisualUiaVerifyNative.exe Execution
+description: Detects suspicious execution of VisualUiaVerifyNative.exe based on prefetch
+  data. A Windows SDK binary for manual and automated testing of Microsoft UI Automation
+  implementation and controls..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: VISUALUIAVERIFYNATIVE.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

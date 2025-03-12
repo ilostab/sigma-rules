@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious VSLaunchBrowser.exe Execution
+description: Detects suspicious execution of VSLaunchBrowser.exe based on prefetch
+  data. Microsoft Visual Studio browser launcher tool for web applications debugging.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: VSLAUNCHBROWSER.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1105
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

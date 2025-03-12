@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious iediagcmd.exe Execution
+description: Detects suspicious execution of iediagcmd.exe based on prefetch data.
+  Diagnostics Utility for Internet Explorer.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: IEDIAGCMD.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

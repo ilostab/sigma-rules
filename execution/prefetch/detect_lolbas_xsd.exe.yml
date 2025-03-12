@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious xsd.exe Execution
+description: Detects suspicious execution of xsd.exe based on prefetch data. XML Schema
+  Definition Tool included with the Windows Software Development Kit (SDK)..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: XSD.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1105
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

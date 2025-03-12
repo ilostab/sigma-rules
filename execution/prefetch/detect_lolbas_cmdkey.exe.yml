@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Cmdkey.exe Execution
+description: Detects suspicious execution of Cmdkey.exe based on prefetch data. creates,
+  lists, and deletes stored user names and passwords or credentials..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: CMDKEY.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1078
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

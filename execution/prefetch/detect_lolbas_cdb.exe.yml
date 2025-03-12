@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Cdb.exe Execution
+description: Detects suspicious execution of Cdb.exe based on prefetch data. Debugging
+  tool included with Windows Debugging Tools..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: CDB.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1127
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

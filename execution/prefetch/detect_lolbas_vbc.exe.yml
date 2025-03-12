@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious vbc.exe Execution
+description: Detects suspicious execution of vbc.exe based on prefetch data. Binary
+  file used for compile vbs code.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: VBC.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1127
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

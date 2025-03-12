@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious AppInstaller.exe Execution
+description: Detects suspicious execution of AppInstaller.exe based on prefetch data.
+  Tool used for installation of AppX/MSIX applications on Windows 10.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: APPINSTALLER.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1105
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

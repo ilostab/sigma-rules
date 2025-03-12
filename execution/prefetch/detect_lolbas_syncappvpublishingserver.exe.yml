@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious SyncAppvPublishingServer.exe Execution
+description: Detects suspicious execution of SyncAppvPublishingServer.exe based on
+  prefetch data. Used by App-v to get App-v server lists.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: SYNCAPPVPUBLISHINGSERVER.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

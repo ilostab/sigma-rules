@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious AddinUtil.exe Execution
+description: Detects suspicious execution of AddinUtil.exe based on prefetch data.
+  .NET Tool used for updating cache files for Microsoft Office Add-Ins..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: ADDINUTIL.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

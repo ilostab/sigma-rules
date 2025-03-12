@@ -1,0 +1,50 @@
+name: Sigma.Prefetch.Test
+description: |
+   This is the human readable description of the artifact.
+
+# Can be CLIENT, CLIENT_EVENT, SERVER, SERVER_EVENT or NOTEBOOK
+type: CLIENT
+
+
+sources:
+  - query: |
+        LET LogSources <= sigma_log_sources(
+          `forensics/windows/prefetch`={
+                 SELECT * FROM Artifact.Windows.Forensics.Prefetch()
+            }
+            )
+            
+        LET FieldMapping <= dict(
+            Name="x=>x.Executable"
+            )
+            
+        LET Rules = 
+        '''
+        title: AT.EXE Scheduled Task Creation
+        status: stable
+        description: Detects the use of AT.EXE to schedule tasks, which is often abused by attackers for persistence.
+        references:
+          - https://lolbas-project.github.io/lolbas/Binaries/At/
+        author: Your Name / Organization
+        date: 2023/10/27
+        logsource:
+          category: forensics
+          product: windows
+          service: prefetch
+        detection:
+          selection:
+            Name: "AT.EXE"
+          condition: selection
+        level: medium
+        tags:
+          - attack.persistence
+          - attack.t1053.005 # Scheduled Task/Job: Scheduled Task
+          - attack.execution
+        '''
+        
+        SELECT * FROM sigma(
+            log_sources=LogSources,
+            field_mapping=FieldMapping,
+            rules=Rules
+        )
+

@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Ieadvpack.dll Execution
+description: Detects suspicious execution of Ieadvpack.dll based on prefetch data.
+  INF installer for Internet Explorer. Has much of the same functionality as advpack.dll..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: IEADVPACK.DLL
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218.011
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

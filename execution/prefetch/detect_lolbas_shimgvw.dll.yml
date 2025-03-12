@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Shimgvw.dll Execution
+description: Detects suspicious execution of Shimgvw.dll based on prefetch data. Photo
+  Gallery Viewer.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: SHIMGVW.DLL
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1105
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

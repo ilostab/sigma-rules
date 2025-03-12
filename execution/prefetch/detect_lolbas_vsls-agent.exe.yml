@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious vsls-agent.exe Execution
+description: Detects suspicious execution of vsls-agent.exe based on prefetch data.
+  Agent for Visual Studio Live Share (Code Collaboration).
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: VSLS-AGENT.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

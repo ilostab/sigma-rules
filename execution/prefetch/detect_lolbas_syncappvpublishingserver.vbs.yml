@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Syncappvpublishingserver.vbs Execution
+description: Detects suspicious execution of Syncappvpublishingserver.vbs based on
+  prefetch data. Script used related to app-v and publishing server.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: SYNCAPPVPUBLISHINGSERVER.VBS
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1216.002
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

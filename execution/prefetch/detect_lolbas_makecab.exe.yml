@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Makecab.exe Execution
+description: Detects suspicious execution of Makecab.exe based on prefetch data. Binary
+  to package existing files into a cabinet (.cab) file.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: MAKECAB.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1564.004
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

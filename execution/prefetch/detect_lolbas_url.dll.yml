@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Url.dll Execution
+description: Detects suspicious execution of Url.dll based on prefetch data. Internet
+  Shortcut Shell Extension DLL..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: URL.DLL
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218.011
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious TestWindowRemoteAgent.exe Execution
+description: Detects suspicious execution of TestWindowRemoteAgent.exe based on prefetch
+  data. TestWindowRemoteAgent.exe is the command-line tool to establish RPC.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: TESTWINDOWREMOTEAGENT.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1048
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

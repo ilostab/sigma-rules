@@ -1,0 +1,21 @@
+title: Prefetch - Suspicious ssh.exe Execution
+description: Detects suspicious execution of ssh.exe based on prefetch data. Ssh.exe
+  is the OpenSSH compatible client can be used to connect to Windows 10 (build 1809
+  and later) and Windows Server 2019 devices..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: SSH.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1202
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

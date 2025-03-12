@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious winget.exe Execution
+description: Detects suspicious execution of winget.exe based on prefetch data. Windows
+  Package Manager tool.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: WINGET.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1105
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious UtilityFunctions.ps1 Execution
+description: Detects suspicious execution of UtilityFunctions.ps1 based on prefetch
+  data. PowerShell Diagnostic Script.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: UTILITYFUNCTIONS.PS1
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1216
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

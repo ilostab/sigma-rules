@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Rpcping.exe Execution
+description: Detects suspicious execution of Rpcping.exe based on prefetch data. Used
+  to verify rpc connection.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: RPCPING.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1003
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

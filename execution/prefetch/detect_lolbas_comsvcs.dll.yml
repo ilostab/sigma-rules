@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Comsvcs.dll Execution
+description: Detects suspicious execution of Comsvcs.dll based on prefetch data. COM+
+  Services.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: COMSVCS.DLL
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1003.001
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

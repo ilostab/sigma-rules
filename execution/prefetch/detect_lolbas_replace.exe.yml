@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Replace.exe Execution
+description: Detects suspicious execution of Replace.exe based on prefetch data. Used
+  to replace file with another file.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: REPLACE.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1105
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Mshta.exe Execution
+description: Detects suspicious execution of Mshta.exe based on prefetch data. Used
+  by Windows to execute html applications. (.hta).
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: MSHTA.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218.005
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

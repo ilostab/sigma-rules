@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious VSDiagnostics.exe Execution
+description: Detects suspicious execution of VSDiagnostics.exe based on prefetch data.
+  Command-line tool used for performing diagnostics..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: VSDIAGNOSTICS.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1127
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

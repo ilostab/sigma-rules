@@ -1,0 +1,22 @@
+title: Prefetch - Suspicious Msconfig.exe Execution
+description: Detects suspicious execution of Msconfig.exe based on prefetch data.
+  MSConfig is a troubleshooting tool which is used to temporarily disable or re-enable
+  software, device drivers or Windows services that run during startup process to
+  help the user determine the cause of a problem with Windows.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: MSCONFIG.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

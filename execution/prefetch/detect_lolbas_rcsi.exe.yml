@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious rcsi.exe Execution
+description: Detects suspicious execution of rcsi.exe based on prefetch data. Non-Interactive
+  command line inerface included with Visual Studio..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: RCSI.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1127
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

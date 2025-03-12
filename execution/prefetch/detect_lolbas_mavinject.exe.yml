@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Mavinject.exe Execution
+description: Detects suspicious execution of Mavinject.exe based on prefetch data.
+  Used by App-v in Windows.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: MAVINJECT.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218.013
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

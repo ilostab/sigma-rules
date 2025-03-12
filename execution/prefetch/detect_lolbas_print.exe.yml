@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Print.exe Execution
+description: Detects suspicious execution of Print.exe based on prefetch data. Used
+  by Windows to send files to the printer.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: PRINT.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1564.004
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Pester.bat Execution
+description: Detects suspicious execution of Pester.bat based on prefetch data. Used
+  as part of the Powershell pester.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: PESTER.BAT
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1216
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

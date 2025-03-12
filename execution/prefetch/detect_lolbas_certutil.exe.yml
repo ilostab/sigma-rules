@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Certutil.exe Execution
+description: Detects suspicious execution of Certutil.exe based on prefetch data.
+  Windows binary used for handling certificates.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: CERTUTIL.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1105
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

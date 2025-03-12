@@ -1,0 +1,21 @@
+title: Prefetch - Suspicious Diskshadow.exe Execution
+description: Detects suspicious execution of Diskshadow.exe based on prefetch data.
+  Diskshadow.exe is a tool that exposes the functionality offered by the volume shadow
+  copy Service (VSS)..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: DISKSHADOW.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1003.003
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

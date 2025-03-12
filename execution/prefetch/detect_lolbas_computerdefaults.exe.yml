@@ -1,0 +1,21 @@
+title: Prefetch - Suspicious ComputerDefaults.exe Execution
+description: Detects suspicious execution of ComputerDefaults.exe based on prefetch
+  data. ComputerDefaults.exe is a Windows system utility for managing default applications
+  for tasks like web browsing, emailing, and media playback..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: COMPUTERDEFAULTS.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1548.002
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

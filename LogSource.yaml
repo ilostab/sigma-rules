@@ -1,0 +1,5 @@
+LET LogSources <= sigma_log_sources(
+          `forensics/windows/prefetch`={
+                 SELECT * FROM Artifact.Windows.Forensics.Prefetch()
+            }
+            )

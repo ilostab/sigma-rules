@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Extexport.exe Execution
+description: Detects suspicious execution of Extexport.exe based on prefetch data.
+  Load a DLL located in the c:\test folder with a specific name..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: EXTEXPORT.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

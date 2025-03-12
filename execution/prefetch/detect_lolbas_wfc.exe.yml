@@ -1,0 +1,21 @@
+title: Prefetch - Suspicious Wfc.exe Execution
+description: Detects suspicious execution of Wfc.exe based on prefetch data. The Workflow
+  Command-line Compiler tool is included with the Windows Software Development Kit
+  (SDK)..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: WFC.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1127
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

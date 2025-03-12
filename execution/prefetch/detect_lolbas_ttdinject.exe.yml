@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Ttdinject.exe Execution
+description: Detects suspicious execution of Ttdinject.exe based on prefetch data.
+  Used by Windows 1809 and newer to Debug Time Travel (Underlying call of tttracer.exe).
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: TTDINJECT.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1127
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

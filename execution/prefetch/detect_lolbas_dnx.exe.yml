@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious dnx.exe Execution
+description: Detects suspicious execution of dnx.exe based on prefetch data. .NET
+  Execution environment file included with .NET..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: DNX.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1127
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

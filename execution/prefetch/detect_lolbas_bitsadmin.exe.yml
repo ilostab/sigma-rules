@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Bitsadmin.exe Execution
+description: Detects suspicious execution of Bitsadmin.exe based on prefetch data.
+  Used for managing background intelligent transfer.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: BITSADMIN.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1564.004
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

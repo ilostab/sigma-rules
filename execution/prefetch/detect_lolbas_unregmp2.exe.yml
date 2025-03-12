@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Unregmp2.exe Execution
+description: Detects suspicious execution of Unregmp2.exe based on prefetch data.
+  Microsoft Windows Media Player Setup Utility.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: UNREGMP2.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1202
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

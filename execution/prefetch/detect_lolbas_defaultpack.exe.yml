@@ -1,0 +1,22 @@
+title: Prefetch - Suspicious DefaultPack.EXE Execution
+description: Detects suspicious execution of DefaultPack.EXE based on prefetch data.
+  This binary can be downloaded along side multiple software downloads on the Microsoft
+  website. It gets downloaded when the user forgets to uncheck the option to set Bing
+  as the default search provider..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: DEFAULTPACK.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

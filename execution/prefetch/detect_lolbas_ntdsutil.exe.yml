@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious ntdsutil.exe Execution
+description: Detects suspicious execution of ntdsutil.exe based on prefetch data.
+  Command line utility used to export Active Directory..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: NTDSUTIL.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1003.003
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

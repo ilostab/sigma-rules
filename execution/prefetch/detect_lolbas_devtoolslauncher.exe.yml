@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Devtoolslauncher.exe Execution
+description: Detects suspicious execution of Devtoolslauncher.exe based on prefetch
+  data. Binary will execute specified binary. Part of VS/VScode installation..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: DEVTOOLSLAUNCHER.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1127
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

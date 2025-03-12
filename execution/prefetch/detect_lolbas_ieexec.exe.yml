@@ -1,0 +1,22 @@
+title: Prefetch - Suspicious Ieexec.exe Execution
+description: Detects suspicious execution of Ieexec.exe based on prefetch data. The
+  IEExec.exe application is an undocumented Microsoft .NET Framework application that
+  is included with the .NET Framework. You can use the IEExec.exe application as a
+  host to run other managed applications that you start by using a URL..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: IEEXEC.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1105
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

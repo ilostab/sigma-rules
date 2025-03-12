@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Ie4uinit.exe Execution
+description: Detects suspicious execution of Ie4uinit.exe based on prefetch data.
+  Executes commands from a specially prepared ie4uinit.inf file..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: IE4UINIT.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

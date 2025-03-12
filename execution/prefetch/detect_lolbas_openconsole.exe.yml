@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious OpenConsole.exe Execution
+description: Detects suspicious execution of OpenConsole.exe based on prefetch data.
+  Console Window host for Windows Terminal.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: OPENCONSOLE.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1202
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

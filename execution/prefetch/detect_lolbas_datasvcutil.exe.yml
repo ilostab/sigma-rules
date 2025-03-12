@@ -1,0 +1,22 @@
+title: Prefetch - Suspicious DataSvcUtil.exe Execution
+description: Detects suspicious execution of DataSvcUtil.exe based on prefetch data.
+  DataSvcUtil.exe is a command-line tool provided by WCF Data Services that consumes
+  an Open Data Protocol (OData) feed and generates the client data service classes
+  that are needed to access a data service from a .NET Framework client application..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: DATASVCUTIL.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1567
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

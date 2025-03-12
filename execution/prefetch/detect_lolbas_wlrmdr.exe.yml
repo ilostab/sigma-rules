@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Wlrmdr.exe Execution
+description: Detects suspicious execution of Wlrmdr.exe based on prefetch data. Windows
+  Logon Reminder executable.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: WLRMDR.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1202
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

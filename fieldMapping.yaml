@@ -1,0 +1,3 @@
+LET FieldMapping <= dict(
+  Executable="x=>x.Executable" // PREFETCH
+  )

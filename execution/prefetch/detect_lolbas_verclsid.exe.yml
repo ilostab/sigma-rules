@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Verclsid.exe Execution
+description: Detects suspicious execution of Verclsid.exe based on prefetch data.
+  Used to verify a COM object before it is instantiated by Windows Explorer.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: VERCLSID.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218.012
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

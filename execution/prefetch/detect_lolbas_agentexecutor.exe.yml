@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious AgentExecutor.exe Execution
+description: Detects suspicious execution of AgentExecutor.exe based on prefetch data.
+  Intune Management Extension included on Intune Managed Devices.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: AGENTEXECUTOR.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

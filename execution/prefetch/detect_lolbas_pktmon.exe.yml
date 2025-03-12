@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Pktmon.exe Execution
+description: Detects suspicious execution of Pktmon.exe based on prefetch data. Capture
+  Network Packets on the windows 10 with October 2018 Update or later..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: PKTMON.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1040
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Wsreset.exe Execution
+description: Detects suspicious execution of Wsreset.exe based on prefetch data. Used
+  to reset Windows Store settings according to its manifest file.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: WSRESET.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1548.002
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

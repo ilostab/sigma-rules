@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious OfflineScannerShell.exe Execution
+description: Detects suspicious execution of OfflineScannerShell.exe based on prefetch
+  data. Windows Defender Offline Shell.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: OFFLINESCANNERSHELL.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Scriptrunner.exe Execution
+description: Detects suspicious execution of Scriptrunner.exe based on prefetch data.
+  Execute binary through proxy binary to evade defensive counter measures.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: SCRIPTRUNNER.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1202
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

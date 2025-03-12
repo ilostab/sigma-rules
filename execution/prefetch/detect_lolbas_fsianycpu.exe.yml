@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious FsiAnyCpu.exe Execution
+description: Detects suspicious execution of FsiAnyCpu.exe based on prefetch data.
+  32/64-bit FSharp (F#) Interpreter included with Visual Studio..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: FSIANYCPU.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1059
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

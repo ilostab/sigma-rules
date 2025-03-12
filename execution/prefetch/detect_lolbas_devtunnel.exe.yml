@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious devtunnel.exe Execution
+description: Detects suspicious execution of devtunnel.exe based on prefetch data.
+  Binary to enable forwarded ports on windows operating systems..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: DEVTUNNEL.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1105
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

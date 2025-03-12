@@ -1,0 +1,21 @@
+title: Prefetch - Suspicious Regsvcs.exe Execution
+description: Detects suspicious execution of Regsvcs.exe based on prefetch data. Regsvcs
+  and Regasm are Windows command-line utilities that are used to register .NET Component
+  Object Model (COM) assemblies.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: REGSVCS.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218.009
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

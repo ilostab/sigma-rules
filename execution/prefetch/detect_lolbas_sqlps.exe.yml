@@ -1,0 +1,23 @@
+title: Prefetch - Suspicious Sqlps.exe Execution
+description: Detects suspicious execution of Sqlps.exe based on prefetch data. Tool
+  included with Microsoft SQL Server that loads SQL Server cmdlets. Microsoft SQL
+  Server\100 and 110 are Powershell v2. Microsoft SQL Server\120 and 130 are Powershell
+  version 4. Replaced by SQLToolsPS.exe in SQL Server 2016, but will be included with
+  installation for compatability reasons..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: SQLPS.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious CL_Mutexverifiers.ps1 Execution
+description: Detects suspicious execution of CL_Mutexverifiers.ps1 based on prefetch
+  data. Proxy execution with CL_Mutexverifiers.ps1.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: CL_MUTEXVERIFIERS.PS1
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1216
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

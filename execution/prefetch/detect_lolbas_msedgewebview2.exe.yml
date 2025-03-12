@@ -1,0 +1,21 @@
+title: Prefetch - Suspicious msedgewebview2.exe Execution
+description: Detects suspicious execution of msedgewebview2.exe based on prefetch
+  data. msedgewebview2.exe is the executable file for Microsoft Edge WebView2, which
+  is a web browser control used by applications to display web content..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: MSEDGEWEBVIEW2.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218.015
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

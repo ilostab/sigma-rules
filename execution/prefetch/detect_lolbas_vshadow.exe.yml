@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Vshadow.exe Execution
+description: Detects suspicious execution of Vshadow.exe based on prefetch data. VShadow
+  is a command-line tool that can be used to create and manage volume shadow copies..
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: VSHADOW.EXE
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1127
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12

@@ -1,0 +1,20 @@
+title: Prefetch - Suspicious Advpack.dll Execution
+description: Detects suspicious execution of Advpack.dll based on prefetch data. Utility
+  for installing software and drivers with rundll32.exe.
+status: experimental
+logsource:
+  product: velociraptor
+  category: execution
+  service: prefetch
+detection:
+  selection:
+    Executable: ADVPACK.DLL
+  condition: selection
+level: medium
+tags:
+- attack.lolbas
+- attack.t1218.011
+references:
+- https://lolbas-project.github.io/
+author: ilo
+date: 2025/03/12
