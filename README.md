@@ -25,7 +25,7 @@ category: execution
 service: prefetch
 ```
 
-## Resources
+## 📚 Resources
 
 - [SigmaHQ](https://github.com/SigmaHQ/sigma)
 - [Sigma rule spec](https://github.com/SigmaHQ/sigma-specification/blob/main/specification/sigma-rules-specification.md#logsource)
