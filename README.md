@@ -1,5 +1,8 @@
 # sigma-rules
 
+## 🛡️ Supports
+* Prefetch (LOLBAS)
+
 ## 🛡️ Purpose
 
 This repository houses a collection of Sigma rules meticulously crafted for use with Velociraptor. These rules are designed to empower security professionals in:
