@@ -16,9 +16,11 @@ The goal is to provide a practical resource for leveraging Sigma's powerful dete
 
 Each rule in this repository adheres to the following specifications:
 
-* **Product:** `velociraptor`
-* **Category:** (e.g., `execution`, `network`, `file_access`) - *Please fill in as appropriate for each rule*
-* **Service:** (e.g., `prefetch`, `UserAssist`, `UAL`) - *Please fill in as appropriate for each rule*
+* **Category:** (e.g., `execution`, `network`, `file_access`)
+
+* **Product:** `windows`, `linux`, `Solaris`, etc.
+
+* **Service:** (e.g., `prefetch`, `UserAssist`, `UAL`) 
 
 **Example:**
 
