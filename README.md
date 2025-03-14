@@ -23,8 +23,8 @@ Each rule in this repository adheres to the following specifications:
 **Example:**
 
 ```yaml
-product: velociraptor
 category: execution
+product: windows
 service: prefetch
 ```
 
